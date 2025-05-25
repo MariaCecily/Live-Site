@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import Main_App.views as smapp_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', smapp_views.homepage, name='homepage'),
+    
 ]

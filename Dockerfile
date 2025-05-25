@@ -2,11 +2,11 @@ FROM python:3.13-bullseye
 
 ENV PYTHONBUFFERED=1
 
-WORKDIR C:\Users\Admin\Documents\Live Site\Zyon_Website\Zyon_Website
+WORKDIR /zyon_website
 
-COPY C:\Users\Admin\Documents\Live Site\Zyon_Website\Requirements.txt
+COPY requirements.txt .
 
-RUN pip install -r Requirements.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 
